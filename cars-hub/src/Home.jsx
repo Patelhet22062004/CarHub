@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer'
 import Card from './components/Card/Card'
 import Review2 from './components/Review2/Review2'
 import { Link } from 'react-router-dom'
+import Scrollbutton from './components/Scrollbutton/Scrollbutton'
 function Home() {
 
    return (
@@ -33,6 +34,7 @@ function Home() {
         </div> 
          <Review2/>
          </div>
+         {/* <Scrollbutton/> */}
 <Divider/>
 <Footer/>
 

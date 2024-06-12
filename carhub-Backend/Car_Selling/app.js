@@ -10,11 +10,14 @@ const adminRoute = require("./routes/admin")
 const carRoute = require("./routes/car")
 const imageRoute = require("./routes/image")
 const checkoutRoute = require("./routes/checkout")
+const paymentRoute = require('./routes/payment');
 
 app.use(bodyParser.json())
 
 app.use('/user',userRoute)
 app.use('/admin',adminRoute)
+app.use('/payment', paymentRoute);
+
 app.use('/car',carRoute)
 app.use('/image',imageRoute)
 app.use('/checkout',checkoutRoute)

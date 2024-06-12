@@ -11,17 +11,20 @@ import Cart from '../../Cart/Cart';
 import SinglePage from '../SinglePage/SinglePage';
 import Checkout from '../../Checkout/Checkout';
 import Signup from '../Signup/Signup';
-import Video from "../Page/Video/Video";
 import Profile from '../Profile/Profile';
 import { CgProfile } from "react-icons/cg";
 import car from "../../../public/images/images/car.jpg"
 import user from "../../../public/images/images/user.png"
+import TicketPage from '../Ticketpage/Ticketpage';
+import { useCart } from 'react-use-cart';
+import Payment from '../Payment/Payment';
 
 function Navbar() {
     const [userData, setUserData] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
     const userId = localStorage.getItem('userId');
+    const { totalItems } = useCart();
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -95,13 +98,14 @@ function Navbar() {
                                     <Link to="/contact" className="px-2.5 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 md:mx-2">Contact</Link>
                                 </div>
                                 <div className="relative flex gap-3  md:mt-0">
-                                    <Link to="/Cart">
+                                    <Link to="/Cart" className="relative">
                                         <img src={car} className='h-20 w-20 hover:scale-110 transition-all' />
+                                        {totalItems > 0 && <span className="absolute top-0 right-0 inline-flex items-center justify-center h-5 w-5 bg-red-500 text-white rounded-full">{totalItems}</span>}
                                     </Link>
                                     {userData ? (
                                         <Link to="/profile" className='mx-2'>
                                             <img src={user} className='h-7 w-7 mt-[17px] hover:scale-110 transition-all' />
-                                            {userData && <span className="">hello,{userData.user.firstName}</span>}
+                                            {userData && <span className="">{userData.user.firstName}</span>}
                                         </Link>
                                     ) : (
                                         <div>
@@ -125,9 +129,7 @@ function Navbar() {
                     </nav>
                     <Routes>
                         <Route path='/about' element={<About1 />} />
-                        <Route path='/' element={<Video />} />
-
-                        <Route path='/home' element={<Home />} />
+                        <Route path='/' element={<Home />} />
                         <Route path='/shop' element={<Shop />} />
                         <Route path='/contact' element={<Contact />} />
                         <Route path='/login' element={<Login />} />
@@ -136,6 +138,9 @@ function Navbar() {
                         <Route path='/checkout' element={<Checkout />} />
                         <Route path='*' element={<Error />} />
                         <Route path='/profile/' element={<Profile />} />
+                        <Route path='/ticketpage' element={<TicketPage />} />
+                        <Route path='/payment' element={<Payment />} />
+                        
                         <Route path='/singlepage/:id' element={<SinglePage />} />
                     </Routes>
 

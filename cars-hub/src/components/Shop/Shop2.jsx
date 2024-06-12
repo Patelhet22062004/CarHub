@@ -77,38 +77,41 @@ function Card() {
                     <p>Loading...</p>
                 ) : (
                     <div className='flex justify-center gap-2'>
-                        <div className='grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
-                            {filteredCars.map((car) => {
-                                const carImage = images.find((image) => image.carId === car.id);
+                        {filteredCars.length === 0 ? (
+                            <p className='font-bold text-xl'>No match found</p>
+                        ) : (
+                            <div className='grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
+                                {filteredCars.map((car) => {
+                                    const carImage = images.find((image) => image.carId === car.id);
 
-                                return (
-                                    <NavLink key={car.id} to={`http://localhost:5173/singlepage/${car.id}`}>
-                                        <div className="max-w-sm rounded h transition-all overflow-hidden shadow-md p-6 mb-6">
-                                            <img className="w-full" src={carImage ? carImage.imageUrl : 'placeholder-image-url'} alt={`${car.year} ${car.make} ${car.model}`} />
-                                            <div className="px-6 py-4 flex flex-col gap-2">
-                                                <div className="font-bold text-xl flex justify-between">
-                                                    {car.make} {car.model}
-                                                    
-                                                </div>
-                                                <div><p className='mb-2 mt-0 font-semibold text-base'>{car.year}</p></div>
-                                                <div className='flex justify-between font-semibold'>
-                                                    <p className='font-semibold'>Mileage : {car.mileage}KM  </p>
-                                                    <p className='hover:text-green-600 text-base'> ₹{car.price} </p>
-                                                </div>
-                                                <div className='flex'>
-                                                    <p className='  font-semibold text-base'>Fuel type :</p>
-                                                    <p className="font-medium text-base"> {car.fuel_type}</p>
-                                                </div>
-                                                <div className='flex'>
-                                                    <p className='  font-semibold text-sm'>Transmission Type :</p>
-                                                    <p className="font-medium text-sm">  {car.transmission_type}</p>
+                                    return (
+                                        <NavLink key={car.id} to={`http://localhost:5173/singlepage/${car.id}`}>
+                                            <div className="max-w-sm rounded h transition-all overflow-hidden shadow-md p-6 mb-6">
+                                                <img className="w-full" src={carImage ? carImage.imageUrl : 'placeholder-image-url'} alt={`${car.year} ${car.make} ${car.model}`} />
+                                                <div className="px-6 py-4 flex flex-col gap-2">
+                                                    <div className="font-bold text-xl flex justify-between">
+                                                        {car.make} {car.model}
+                                                    </div>
+                                                    <div><p className='mb-2 mt-0 font-semibold text-base'>{car.year}</p></div>
+                                                    <div className='flex justify-between font-semibold'>
+                                                        <p className='font-semibold'>Mileage : {car.mileage}KM  </p>
+                                                        <p className='hover:text-green-600 text-base'> ₹{car.price} </p>
+                                                    </div>
+                                                    <div className='flex'>
+                                                        <p className='  font-semibold text-base'>Fuel type :</p>
+                                                        <p className="font-medium text-base"> {car.fuel_type}</p>
+                                                    </div>
+                                                    <div className='flex'>
+                                                        <p className='  font-semibold text-sm'>Transmission Type :</p>
+                                                        <p className="font-medium text-sm">  {car.transmission_type}</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </NavLink>
-                                );
-                            })}
-                        </div>
+                                        </NavLink>
+                                    );
+                                })}
+                            </div>
+                        )}
                     </div>
                 )}
             </div>

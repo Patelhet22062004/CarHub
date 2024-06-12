@@ -1,16 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useCart } from 'react-use-cart';
 
-
 function Singleproduct() {
-
     const [car, setCars] = useState([]);
     const { addItem } = useCart();
-    const { id } = useParams(); // Get the carId from the URL params
+    const { id } = useParams();
     const [images, setImages] = useState([]);
     const [message, setMessage] = useState('');
     const [userData, setUserData] = useState(null);
@@ -42,9 +38,6 @@ function Singleproduct() {
 
         fetchUserData();
     }, [userId]);
-
-    // const history = useHistory();
-
     const handleAddToCart = () => {
         const itemToAdd = {
             id: car.id,
@@ -54,7 +47,7 @@ function Singleproduct() {
             quantity: 1 // Assuming you always add one item at a time
         };
         addItem(itemToAdd);
-        setMessage('Car added to wishlist');
+        setMessage('Car added to Test Drive');
     };
 
     useEffect(() => {
@@ -70,7 +63,6 @@ function Singleproduct() {
             }
             const data = await response.json();
             setCars(data);
-
         } catch (error) {
             console.error('Error fetching car data:', error);
         }
@@ -84,35 +76,35 @@ function Singleproduct() {
             }
             const data = await response.json();
             setImages(data);
+            if (data && data[1]) { // Check if images[1] exists
+                setActiveImage(data[1].imageUrl); // Set activeImg to images[1].imageUrl
+            }
         } catch (error) {
             console.error('Error fetching image data:', error);
         }
     };
-    const [activeImg, setActiveImage] = useState()
+
+    const [activeImg, setActiveImage] = useState(); // Initialize activeImg state variable
 
     if (!car) {
         return <p>Loading...</p>;
     }
-    console.log(images);
+
     return (
-
-        <div className='flex flex-col justify-center items-center lg:flex-row gap-16 lg:items-center'>
-            <div className='flex flex-col gap-6'>
-
-                {/* {images.length > 0 && (<img src={images[0].imageUrl} alt="Main Image" />)}      */}
-                <img src={activeImg} alt="" className=' aspect-square object-cover rounded-md  ' />
-                <div className='flex flex-row justify-between gap-1 h-24 w-1/4'>
-
-                    {images.length > 0 && (<img src={images[1].imageUrl} alt="Main Image" onClick={() => setActiveImage(images[1].imageUrl)} />)}
-                    {images.length > 0 && (<img src={images[2].imageUrl} alt="Main Image" onClick={() => setActiveImage(images[2].imageUrl)} />)}
-                    {images.length > 0 && (<img src={images[3].imageUrl} alt="Main Image" onClick={() => setActiveImage(images[3].imageUrl)} />)}
-                    {images.length > 0 && (<img src={images[4].imageUrl} alt="Main Image" onClick={() => setActiveImage(images[4].imageUrl)} />)}
+        <div className='flex  justify-center items-center  gap-16'>
+            <div className='flex  md:flex-row flex-col justify-center align-middle md:p-36'>
+                <div className='flex flex-col gap-6 justify-center'>
+                   <div> <img src={activeImg} alt="" className=' aspect-square object-cover  rounded-md  ' /></div>
+                    <div className='flex flex-row justify-between gap-1 h-24 md:w-1/5 w-1/6'>
+                        {images.length > 0 && images.map((image, index) => (
+                            <img key={index} src={image.imageUrl} alt="Main Image" onClick={() => setActiveImage(image.imageUrl)} />
+                        ))}
+                    </div>
                 </div>
-
-            </div>
-            <div className='flex flex-col gap-4  lg:w-2/4'>
-                <p className='text-gray-700 text-lg'>
-                    {car.year} </p>
+                <div className='flex flex-col gap-4 justify-center md:mt-0 mt-16 md:ml-32 ml-12 lg:w-2/4'>
+                    <p className='text-gray-700 text-lg'>
+                        {car.year}
+                    </p>
                 <span className='text-3xl font-bold'>{car.make} {car.model}</span>
                 <div className='flex gap-3 '>
                     <div className='bg-slate-300 text-base p-2 rounded-lg font-semibold'>{car.mileage}KM</div>
@@ -129,14 +121,15 @@ function Singleproduct() {
 
 
                     {userData ? (
-                        <button className='bg-blue-400 font-semibold px-5 py-2 text-white rounded-md' onClick={handleAddToCart}>Add to Wishlist</button>
+                        <button className='bg-blue-400 font-semibold px-5 py-2 text-white rounded-md' onClick={handleAddToCart}>Book Test Drive</button>
                     ) : (
-                        <Link to="/login" className='bg-blue-400 font-semibold px-5 py-2 text-white rounded-md'>Login to Book Test Drive</Link>
+                        <Link to="/login" className='bg-red-400 font-semibold px-5 py-2 text-white rounded-md'>Login to Book Test Drive</Link>
                     )}
                     {message && <p className='pl-5'>{message}</p>}
                 </div>
             </div>
-        </div>
+            </div>
+             </div>
 
 
     );
