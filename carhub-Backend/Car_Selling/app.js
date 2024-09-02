@@ -3,13 +3,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const app = express()
 
-app.use(cors(
-    {
-        origin:["https://car-hub-backend.vercel.app/"],
-        methods:["post","get"],
-        credentials:true
-    }
-));
+app.use(cors());
 const userRoute = require("./routes/user")
 const adminRoute = require("./routes/admin")
 const carRoute = require("./routes/car")
