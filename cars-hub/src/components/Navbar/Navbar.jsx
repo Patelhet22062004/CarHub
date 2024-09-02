@@ -13,8 +13,8 @@ import Checkout from '../../Checkout/Checkout';
 import Signup from '../Signup/Signup';
 import Profile from '../Profile/Profile';
 import { CgProfile } from "react-icons/cg";
-import car from "../images/images/car.jpg"
-import user from "../images/images/user.png"
+import car from "../../../public/images/images/car.jpg"
+import user from "../../../public/images/images/user.png"
 import TicketPage from '../Ticketpage/Ticketpage';
 import { useCart } from 'react-use-cart';
 import Payment from '../Payment/Payment';
