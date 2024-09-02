@@ -1,4 +1,3 @@
-'use client';
 import React, {useState} from 'react'
 import { IoIosArrowUp } from 'react-icons/io'
 // import Styles from "./Scrollbutton.module.css"
