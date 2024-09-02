@@ -41,7 +41,7 @@ export default function Banner() {
        <div className='justify-center flex'>
        <Link to={"http://localhost:5173/shop"}> <button className='bg-lime-500 w-fit text-white mt-3 rounded px-3 py-2'>Explore Here</button>
        </Link></div></div>
-        <img src='../../public/images/images/banner2.webp'/>
+        <img src='/images/images/banner2.webp'/>
           
             </SwiperSlide>
         <SwiperSlide className='h-[500px]'>
@@ -53,7 +53,7 @@ export default function Banner() {
         <Link to={"http://localhost:5173/shop"}> <button className='bg-lime-500 w-fit text-white mt-3 rounded px-3 py-2'>Explore Here</button>
        </Link></div>
         </div>
-        <img src='../../public/images/images/banner3.webp' className='h-[660px]'/>
+        <img src='/images/images/banner3.webp' className='h-[660px]'/>
             </SwiperSlide>
         <SwiperSlide className='h-[500px]'>
         <div className=' flex flex-col flex-shrink absolute z-30 sm:left-10 left-0  md:left-16 '>
@@ -64,7 +64,7 @@ export default function Banner() {
         <Link to={"http://localhost:5173/shop"}> <button className='bg-lime-500 w-fit text-white mt-3 rounded px-3 py-2'>Explore Here</button>
        </Link></div>
         </div>
-        <img src='../../public/images/images/banner4.webp'/>
+        <img src='/images/images/banner4.webp'/>
             </SwiperSlide>
       
        
