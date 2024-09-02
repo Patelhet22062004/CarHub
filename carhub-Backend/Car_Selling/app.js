@@ -10,7 +10,6 @@ app.use(cors(
         credentials:true
     }
 ));
-
 const userRoute = require("./routes/user")
 const adminRoute = require("./routes/admin")
 const carRoute = require("./routes/car")
