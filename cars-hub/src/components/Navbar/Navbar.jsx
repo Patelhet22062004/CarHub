@@ -11,13 +11,13 @@ import Cart from '../../Cart/Cart';
 import SinglePage from '../SinglePage/SinglePage';
 import Checkout from '../../Checkout/Checkout';
 import Signup from '../Signup/Signup';
+import Video from "../Page/Video/Video";
 import Profile from '../Profile/Profile';
 import { CgProfile } from "react-icons/cg";
 import car from "../../../public/images/images/car.jpg"
 import user from "../../../public/images/images/user.png"
 import TicketPage from '../Ticketpage/Ticketpage';
 import { useCart } from 'react-use-cart';
-import Payment from '../Payment/Payment';
 
 function Navbar() {
     const [userData, setUserData] = useState(null);
@@ -29,7 +29,7 @@ function Navbar() {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/user/${userId}`, {
+                const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/user/${userId}`, {
                     headers: {
                         'Content-type': 'application/json',
                     }
@@ -75,7 +75,7 @@ function Navbar() {
                         <div className="container px-6 md:py-3 mx-auto md:flex">
                             <div className="flex items-center justify-between">
                                 <Link to="/">
-                                    <img className="w-auto md:h-24 h-16" src="images/images/logos/Logo.png" alt="" />
+                                    <img className="w-auto md:h-24 h-16" src="public/images/images/logos/Logo.png" alt="" />
                                 </Link>
                                 <div className="flex md:hidden">
                                     <button
@@ -98,15 +98,19 @@ function Navbar() {
                                     <Link to="/contact" className="px-2.5 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 md:mx-2">Contact</Link>
                                 </div>
                                 <div className="relative flex gap-3  md:mt-0">
-                                    <Link to="/Cart" className="relative">
+
+                                    {userData ? (
+                                        <>
+                                        <Link to="/cart" className="relative">
                                         <img src={car} className='h-20 w-20 hover:scale-110 transition-all' />
                                         {totalItems > 0 && <span className="absolute top-0 right-0 inline-flex items-center justify-center h-5 w-5 bg-red-500 text-white rounded-full">{totalItems}</span>}
                                     </Link>
-                                    {userData ? (
+
                                         <Link to="/profile" className='mx-2'>
                                             <img src={user} className='h-7 w-7 mt-[17px] hover:scale-110 transition-all' />
                                             {userData && <span className="">{userData.user.firstName}</span>}
                                         </Link>
+                                        </>
                                     ) : (
                                         <div>
                                             <Link to="/login">
@@ -129,7 +133,9 @@ function Navbar() {
                     </nav>
                     <Routes>
                         <Route path='/about' element={<About1 />} />
-                        <Route path='/' element={<Home />} />
+                        <Route path='/' element={<Video />} />
+
+                        <Route path='/home' element={<Home />} />
                         <Route path='/shop' element={<Shop />} />
                         <Route path='/contact' element={<Contact />} />
                         <Route path='/login' element={<Login />} />
@@ -139,8 +145,6 @@ function Navbar() {
                         <Route path='*' element={<Error />} />
                         <Route path='/profile/' element={<Profile />} />
                         <Route path='/ticketpage' element={<TicketPage />} />
-                        <Route path='/payment' element={<Payment />} />
-                        
                         <Route path='/singlepage/:id' element={<SinglePage />} />
                     </Routes>
 

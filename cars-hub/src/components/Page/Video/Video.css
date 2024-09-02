@@ -1,0 +1,46 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.over{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    } 
+.overlay video {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+}
+.text {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 40px;
+    color: white;
+    font: bolder;
+    font-size: 80px;
+}
+
+#asd{
+    color:royalblue
+}
