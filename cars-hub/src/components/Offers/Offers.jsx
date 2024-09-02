@@ -5,7 +5,7 @@ export default function Offers() {
     <div className='flex md:flex-col flex-row justify-center gap-5 my-3' >
     <div className="bg-blue-500  flex flex-col  md:block hidden flex-shrink text-white p-6 rounded-lg">
       <div className='flex'><h2 className="text-2xl font-bold mb-4">Need a car loan?</h2>
-      <img src='public/images/images/small.webp'/></div>
+      <img src='images/images/small.webp'/></div>
       <div className="grid grid-cols-3 mb-4">
         <div>
           <h3 className="text-xl font-bold">₹0 </h3>
@@ -25,11 +25,11 @@ export default function Offers() {
     </div>
     <div className=" ">
       
-      <img src="public/images/images/sakranti-2024-desktop.webp" alt="Man Flying Kite" className="rounded" />
+      <img src="images/images/sakranti-2024-desktop.webp" alt="Man Flying Kite" className="rounded" />
     </div>
     <div className="">
     
-        <img src="public/images/images/homepage-desktop-new.webp" alt="Car 1" className="rounded" />
+        <img src="images/images/homepage-desktop-new.webp" alt="Car 1" className="rounded" />
        
     </div>
     </div>

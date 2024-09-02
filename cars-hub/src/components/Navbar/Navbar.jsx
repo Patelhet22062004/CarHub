@@ -13,8 +13,8 @@ import Checkout from '../../Checkout/Checkout';
 import Signup from '../Signup/Signup';
 import Profile from '../Profile/Profile';
 import { CgProfile } from "react-icons/cg";
-import car from "../../../public/images/images/car.jpg"
-import user from "../../../public/images/images/user.png"
+import car from "../images/images/car.jpg"
+import user from "../images/images/user.png"
 import TicketPage from '../Ticketpage/Ticketpage';
 import { useCart } from 'react-use-cart';
 import Payment from '../Payment/Payment';
@@ -75,7 +75,7 @@ function Navbar() {
                         <div className="container px-6 md:py-3 mx-auto md:flex">
                             <div className="flex items-center justify-between">
                                 <Link to="/">
-                                    <img className="w-auto md:h-24 h-16" src="public/images/images/logos/Logo.png" alt="" />
+                                    <img className="w-auto md:h-24 h-16" src="images/images/logos/Logo.png" alt="" />
                                 </Link>
                                 <div className="flex md:hidden">
                                     <button

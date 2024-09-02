@@ -29,7 +29,7 @@ const Card = ({ variant }) => {
             <div className={clsx("max-w-sm rounded  hover:scale-105  transition-all overflow-hidden  shadow-md p-6 mb-6 hover:bg-indigo-50",{ 
                " hover:scale-0":variant==="grid" 
             })}>
-                <img className="w-full "  src='public/images/images/cars/ford/42 (3).webp' alt="2016 Volkswagen Ameo" />
+                <img className="w-full "  src='images/images/cars/ford/42 (3).webp' alt="2016 Volkswagen Ameo" />
                 <div className="px-6 py-4 flex flex-col gap-2">
                     <div className="font-bold text-xl mb-2 flex justify-between" >2016 Volkswagen Ameo
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="svgheart" className="w-6 h-6" onClick={changeColor}>
@@ -50,7 +50,7 @@ const Card = ({ variant }) => {
             </div>
 
             <div className="max-w-sm rounded  hover:scale-105  transition-all overflow-hidden  shadow-md p-6 mb-6 hover:bg-indigo-50">
-                <img className="w-full" src='public/images/images/cars/honda/42 (2).webp' alt="2016 Volkswagen Ameo" />
+                <img className="w-full" src='images/images/cars/honda/42 (2).webp' alt="2016 Volkswagen Ameo" />
                 <div className="px-6 py-4 flex flex-col gap-2">
                     <div className="font-bold text-xl mb-2 flex justify-between" >2006 Honda Amaze
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="svgheart" className="w-6 h-6" onClick={changeColor}>
@@ -71,7 +71,7 @@ const Card = ({ variant }) => {
             </div>
 
             <div className="max-w-sm rounded  hover:scale-105  transition-all overflow-hidden  shadow-md p-6 mb-6 hover:bg-indigo-50">
-                <img className="w-full" src='public/images/images/cars/jeep/43 (3).webp' alt="2016 Volkswagen Ameo" />
+                <img className="w-full" src='images/images/cars/jeep/43 (3).webp' alt="2016 Volkswagen Ameo" />
                 <div className="px-6 py-4 flex flex-col gap-2">
                     <div className="font-bold text-xl mb-2 flex justify-between" >2023 Jeep Wrangler
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="svgheart" className="w-6 h-6" onClick={changeColor}>
@@ -92,7 +92,7 @@ const Card = ({ variant }) => {
             </div>
 
             <div className="max-w-sm rounded  hover:scale-105  transition-all overflow-hidden  shadow-md p-6 mb-6 hover:bg-indigo-50">
-                <img className="w-full" src='public/images/images/cars/kia/43 (1).webp' alt="2016 Volkswagen Ameo" />
+                <img className="w-full" src='images/images/cars/kia/43 (1).webp' alt="2016 Volkswagen Ameo" />
                 <div className="px-6 py-4 flex flex-col gap-2">
                     <div className="font-bold text-xl mb-2 flex justify-between" >2024 Kia Seltos
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="svgheart" className="w-6 h-6" onClick={changeColor}>
@@ -113,7 +113,7 @@ const Card = ({ variant }) => {
             </div>
 
             <div className="max-w-sm rounded  hover:scale-105  transition-all overflow-hidden  shadow-md p-6 mb-6 hover:bg-indigo-50">
-                <img className="w-full" src='public/images/images/cars/mahindra/1-7-Exterior-11095156706-e1d3f3aee14e41a0bdade74d2837c514-Exterior-6.webp' alt="2016 Volkswagen Ameo" />
+                <img className="w-full" src='images/images/cars/mahindra/1-7-Exterior-11095156706-e1d3f3aee14e41a0bdade74d2837c514-Exterior-6.webp' alt="2016 Volkswagen Ameo" />
                 <div className="px-6 py-4 flex flex-col gap-2">
                     <div className="font-bold text-xl mb-2 flex justify-between" >2018 Mahindra Scorpio
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="svgheart" className="w-6 h-6" onClick={changeColor}>
@@ -134,7 +134,7 @@ const Card = ({ variant }) => {
             </div>
 
             <div className="max-w-sm rounded  hover:scale-105  transition-all overflow-hidden  shadow-md p-6 mb-6 hover:bg-indigo-50">
-                <img className="w-full" src='public/images/images/cars/toyota/44 (1).webp' alt="2016 Volkswagen Ameo" />
+                <img className="w-full" src='images/images/cars/toyota/44 (1).webp' alt="2016 Volkswagen Ameo" />
                 <div className="px-6 py-4 flex flex-col gap-2">
                     <div className="font-bold text-xl mb-2 flex justify-between" >2015 Toyota Fortuner
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="svgheart" className="w-6 h-6" onClick={changeColor}>

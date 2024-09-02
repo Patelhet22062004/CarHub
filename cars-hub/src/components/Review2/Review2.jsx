@@ -42,7 +42,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="bg-white shadow-md rounded-2xl p-6 my-[2px] ">
                         <div className="flex items-center justify-center h-56">
-                            <img src="public/images/images/Review/Royals_Durga_1703848055.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
+                            <img src="images/images/Review/Royals_Durga_1703848055.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
                         </div>
                         <p className="mt-6 text-center text-gray-600">The diverse range of cars is impressive, my dream of owning a car has come true because of CARS24. Thank you!</p>
                         <p className="mt-4 text-center text-gray-800 font-semibold">Royals Durga</p>
@@ -52,7 +52,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="bg-white shadow-md rounded-2xl p-6 ">
                         <div className="flex items-center justify-center h-56">
-                            <img src="public/images/images/Review/Sumon_Dey_1703847789.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
+                            <img src="images/images/Review/Sumon_Dey_1703847789.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
                         </div>
                         <p className="mt-6 text-center text-gray-600">A big thank you to the entire team at CARS24 in helping me choose the charming Micra. Highly recommended.Thank you!</p>
                         <p className="mt-4 text-center text-gray-800 font-semibold">Sumon Dey</p>
@@ -62,7 +62,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="bg-white shadow-md rounded-2xl p-6 ">
                         <div className="flex items-center justify-center h-56">
-                            <img src="public/images/images/Review/Ganesh_Kaparaboina_1703844359.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
+                            <img src="images/images/Review/Ganesh_Kaparaboina_1703844359.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
                         </div>
                         <p className="mt-6 text-center text-gray-600"> efficiently facilitated the loan process and streamlined the payment process, making the entire experience smooth.Thank you!</p>
                         <p className="mt-4 text-center text-gray-800 font-semibold">Ganesh Kaparaboina</p>
@@ -72,7 +72,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="bg-white shadow-md rounded-2xl p-6 ">
                         <div className="flex items-center justify-center h-56">
-                            <img src="public/images/images/Review/Kishan_Vaghela_1701938033.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
+                            <img src="images/images/Review/Kishan_Vaghela_1701938033.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
                         </div>
                         <p className="mt-6 text-center text-gray-600"> The wide range of cars available was impressive, and because of the finance team, I could easily buy a car. Thanks!</p>
                         <p className="mt-4 text-center text-gray-800 font-semibold">Kishan Vaghela</p>
@@ -82,7 +82,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="bg-white shadow-md rounded-2xl p-6 ">
                         <div className="flex items-center justify-center h-56">
-                            <img src="public/images/images/Review/Shashi_Kumar_1701937959.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
+                            <img src="images/images/Review/Shashi_Kumar_1701937959.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
                         </div>
                         <p className="mt-6 text-center text-gray-600">  offers top quality cars and provides amazing customer support. I will definitely recommend it to my friends.Thank you!</p>
                         <p className="mt-4 text-center text-gray-800 font-semibold">Shashi Kumar</p>
@@ -92,7 +92,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="bg-white shadow-md rounded-2xl p-6 ">
                         <div className="flex items-center justify-center h-56">
-                            <img src="public/images/images/Review/Surya_Yadav_1701937885.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
+                            <img src="images/images/Review/Surya_Yadav_1701937885.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
                         </div>
                         <p className="mt-6 text-center text-gray-600">  helped me with the entire loan process because of which I got my dream car within a day. Really grateful to them.Thank you!</p>
                         <p className="mt-4 text-center text-gray-800 font-semibold">Surya Yadav</p>
@@ -102,7 +102,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="bg-white shadow-md rounded-2xl p-6 ">
                         <div className="flex items-center justify-center h-56">
-                            <img src="public/images/images/Review/Shashank_Bhole_1701937784.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
+                            <img src="images/images/Review/Shashank_Bhole_1701937784.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
                         </div>
                         <p className="mt-6 text-center text-gray-600"> Owing to CARS24's efficiency & transparency, I bought my first car within a day. Thank you for the great experience.Thank you!</p>
                         <p className="mt-4 text-center text-gray-800 font-semibold">Shashank Bhole</p>
@@ -112,7 +112,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="bg-white shadow-md rounded-2xl p-6 ">
                         <div className="flex items-center justify-center h-56">
-                            <img src="public/images/images/Review/Mahi_Pawar_1693564541.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
+                            <img src="images/images/Review/Mahi_Pawar_1693564541.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
                         </div>
                         <p className="mt-6 text-center text-gray-600"> Came here for a pre-owned car and found the best! The team's support exceeded my expectations. Extremely happy with my</p>
                         <p className="mt-4 text-center text-gray-800 font-semibold">Mahi Pawar</p>
@@ -122,7 +122,7 @@ export default function App() {
                 <SwiperSlide>
                     <div className="bg-white shadow-md rounded-2xl p-6 ">
                         <div className="flex items-center justify-center h-56">
-                            <img src="public/images/images/Review/Pruthvi_Zala_1693564176.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
+                            <img src="images/images/Review/Pruthvi_Zala_1693564176.webp" alt="Testimonial" className=" h-24 w-24 object-cover" />
                         </div>
                         <p className="mt-6 text-center text-gray-600"> I had a smooth car buying experience. I was able to find a car that perfectly matched my requirements from a wide array of options.</p>
                         <p className="mt-4 text-center text-gray-800 font-semibold">Pruthvi Zala</p>

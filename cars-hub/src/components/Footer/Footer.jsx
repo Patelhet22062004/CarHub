@@ -69,7 +69,7 @@ const Footer = () => {
                         <p>Phone: + 00 123 456 789 </p>
                     </div>
                     <div className="flex pt-5">
-                        <img src='../../public/images/images/payment_method.png' />
+                        <img src='images/images/payment_method.png' />
                     </div>
                 </div>
                 <div className="flex flex-col justify-between md:flex-row p-10">
