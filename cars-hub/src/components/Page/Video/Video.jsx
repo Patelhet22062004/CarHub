@@ -1,6 +1,6 @@
 import React from 'react'
 import './Video.css'
-import videoBg from '/public/video/video/cenamatic.webm'
+import videoBg from '../../../../public/video/cenamatic.mp4'
 import useSound from 'use-sound'
 // import { useNavigate } from 'react-router-dom';
 import img from "../../../../public/images/images/Enginr.png"
@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 // import videoBg from '../../../public/video/1234.mp4'
 
 function Video() {
-    const [playSound] = useSound('/public/video/video/Car.mp3');
+    const [playSound] = useSound("public/video/Car.mp3");
     return (
         <div className='main'>
             <div className="overlay">

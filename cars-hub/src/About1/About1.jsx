@@ -10,7 +10,7 @@ const About1 = () => {
         <h1 className='flex flex-wrap text-[55px]'>About us</h1>
         <ul className='flex flex-wrap gap-4'>
             <li>
-             <a href='/'>Home
+             <a href='/home'>Home
              </a> 
              </li>
             <li> &#62; </li>

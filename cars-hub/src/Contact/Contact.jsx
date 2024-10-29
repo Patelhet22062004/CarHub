@@ -10,7 +10,7 @@ export default function Contact() {
         <h1 className='flex flex-wrap text-[55px]'>Contact</h1>
         <ul className='flex flex-wrap gap-4'>
             <li>
-             <a href='/'>Home
+             <a href='/home'>Home
              </a> 
              </li>
             <li> &#62; </li>

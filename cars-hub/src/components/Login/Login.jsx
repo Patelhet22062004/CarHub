@@ -27,7 +27,6 @@ function Login() {
       }
   
       const data = await response.json();
-      console.log(data);
       localStorage.setItem('userId',data.userId)
       // Redirect to the user's profile page
       redirectToHome();

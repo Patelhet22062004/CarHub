@@ -17,7 +17,7 @@ const About = () => {
             </div>
             <div className="w-1/2">
                 {/* Image goes here */}
-                <img src="images/images/about/636e94128fa4686e5c0de640_Text + image (4).png" alt="Detailer at work" />
+                <img src="public/images/images/about/636e94128fa4686e5c0de640_Text + image (4).png" alt="Detailer at work" />
             </div>
         </div>
     </div>

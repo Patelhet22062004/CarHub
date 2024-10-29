@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom';
 import { useCart } from 'react-use-cart';
 
 const CartPage = () => {
-  const { items, cartTotal, removeItem } = useCart();
+  const cart = useCart();
+  const { items, totalItems, cartTotal, updateItemQuantity, removeItem, setItems } = cart;
+
+  // Handle removing an item from the cart
+  const handleRemoveItem = (id) => {
+    removeItem(id);
+  };
 
   return (
     <div className="bg-gray-100 h-screen py-8">
@@ -28,12 +34,19 @@ const CartPage = () => {
                       <tr key={item.id}>
                         <td className="py-4">
                           <div className="flex md:flex-row flex-col items-center">
-                            <img className="sm:h-40 rounded-md" src={item.image} alt={item.name} />
+                            <img className="h-40 rounded-md" src={item.image} alt={item.name} />
                             <span className="font-semibold md:ml-8">{item.name}</span>
                           </div>
                         </td>
                         <td className="py-4">{item.price}</td>
-                        <td className="py-4"><button className='bg-slate-100 rounded-lg p-2' onClick={() => removeItem(item.id)}>Remove</button></td>
+                        <td className="py-4">
+                          <button
+                            className="bg-slate-100 rounded-lg p-2"
+                            onClick={() => handleRemoveItem(item.id)}
+                          >
+                            Remove
+                          </button>
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -45,7 +58,7 @@ const CartPage = () => {
                 <h2 className="text-lg font-semibold mb-4">Summary</h2>
                 <div className="flex justify-between mb-2">
                   <span>Test Drive Charge</span>
-                  <span>{cartTotal / 1000}.00</span>
+                  <span>{(cartTotal / 1000).toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between mb-2">
                   <span>Taxes</span>
@@ -58,9 +71,11 @@ const CartPage = () => {
                 <hr className="my-2" />
                 <div className="flex justify-between mb-2">
                   <span className="font-semibold">Total</span>
-                  <span className="font-semibold">{cartTotal / 1000}.00</span>
+                  <span className="font-semibold">{(cartTotal / 1000).toFixed(2)}</span>
                 </div>
-                <Link to={{ pathname: "/checkout", state: { cartItems: items } }} className="bg-blue-500 text-white py-2 px-4 rounded-lg">Checkout</Link>
+                <Link to={{ pathname: "/checkout", state: { cartItems: items } }} className="bg-blue-500 text-white py-2 px-4 rounded-lg">
+                  Checkout
+                </Link>
               </div>
             </div>
           </div>

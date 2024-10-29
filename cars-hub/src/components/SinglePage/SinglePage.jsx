@@ -91,11 +91,11 @@ function Singleproduct() {
     }
 
     return (
-        <div className='flex  justify-center items-center  gap-16'>
-            <div className='flex  md:flex-row flex-col justify-center align-middle md:p-36'>
+        <div className='flex  justify-center items-center py-36 gap-16'>
+            <div className='flex  md:flex-row bg-white flex-col justify-center align-middle md:p-14'>
                 <div className='flex flex-col gap-6 justify-center'>
                    <div> <img src={activeImg} alt="" className=' aspect-square object-cover  rounded-md  ' /></div>
-                    <div className='flex flex-row justify-between gap-1 h-24 md:w-1/5 w-1/6'>
+                    <div className='flex flex-row justify-between gap-1 h-16 md:w-1/5 w-1/6'>
                         {images.length > 0 && images.map((image, index) => (
                             <img key={index} src={image.imageUrl} alt="Main Image" onClick={() => setActiveImage(image.imageUrl)} />
                         ))}
@@ -117,13 +117,10 @@ function Singleproduct() {
                 <h6 className='text-2xl'>Rs {car.price}</h6>
                 <div className='flex flex-row items-center pt-4'>
 
-                    {/* <button className='bg-blue-400 font-semibold px-5 py-2 text-white rounded-md' onClick={() => handleAddToCart(car)}>Book Test Drive</button> */}
-
-
                     {userData ? (
-                        <button className='bg-blue-400 font-semibold px-5 py-2 text-white rounded-md' onClick={handleAddToCart}>Book Test Drive</button>
+                        <button  className="bg-blue-500 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300" onClick={handleAddToCart}>Book Test Drive</button>
                     ) : (
-                        <Link to="/login" className='bg-red-400 font-semibold px-5 py-2 text-white rounded-md'>Login to Book Test Drive</Link>
+                        <Link to="/login" className='bg-red-400 font-semibold px-3 py-2 text-white rounded-md'>Login to Book Test Drive</Link>
                     )}
                     {message && <p className='pl-5'>{message}</p>}
                 </div>

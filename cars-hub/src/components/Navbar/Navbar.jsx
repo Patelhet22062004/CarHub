@@ -13,7 +13,7 @@ import Checkout from '../../Checkout/Checkout';
 import Signup from '../Signup/Signup';
 import Video from "../Page/Video/Video";
 import Profile from '../Profile/Profile';
-import { CgProfile } from "react-icons/cg";
+import logo from "../../../public/images/images/logos/Logo.png";
 import car from "../../../public/images/images/car.jpg"
 import user from "../../../public/images/images/user.png"
 import TicketPage from '../Ticketpage/Ticketpage';
@@ -29,7 +29,7 @@ function Navbar() {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/user/${userId}`, {
+                const response = await fetch(`http://localhost:3000/user/${userId}`, {
                     headers: {
                         'Content-type': 'application/json',
                     }
@@ -75,7 +75,7 @@ function Navbar() {
                         <div className="container px-6 md:py-3 mx-auto md:flex">
                             <div className="flex items-center justify-between">
                                 <Link to="/">
-                                    <img className="w-auto md:h-24 h-16" src="public/images/images/logos/Logo.png" alt="" />
+                                    <img className="w-auto md:h-24 h-16" src={logo} alt="" />
                                 </Link>
                                 <div className="flex md:hidden">
                                     <button
@@ -101,7 +101,7 @@ function Navbar() {
 
                                     {userData ? (
                                         <>
-                                        <Link to="/cart" className="relative">
+                                        <Link to="/Cart" className="relative">
                                         <img src={car} className='h-20 w-20 hover:scale-110 transition-all' />
                                         {totalItems > 0 && <span className="absolute top-0 right-0 inline-flex items-center justify-center h-5 w-5 bg-red-500 text-white rounded-full">{totalItems}</span>}
                                     </Link>
