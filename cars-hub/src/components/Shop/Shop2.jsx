@@ -82,7 +82,7 @@ function Card() {
                                 const carImage = images.find((image) => image.carId === car.id);
 
                                 return (
-                                    <NavLink key={car.id} to={`http://localhost:5173/singlepage/${car.id}`}>
+                                    <NavLink key={car.id} to={`/singlepage/${car.id}`}>
                                         <div className="max-w-sm rounded h transition-all overflow-hidden shadow-md p-6 mb-6">
                                             <img className="w-full" src={carImage ? carImage.imageUrl : 'placeholder-image-url'} alt={`${car.year} ${car.make} ${car.model}`} />
                                             <div className="px-6 py-4 flex flex-col gap-2">

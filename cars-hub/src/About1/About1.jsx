@@ -15,15 +15,15 @@ const About1 = () => {
              </li>
             <li> &#62; </li>
             <li>
-            <a href='http://localhost:5173/shop'>Shop </a>
+            <a href='/shop'>Shop </a>
 
             </li>
             <li> &#62; </li>
             <li>
-              <a href='http://localhost:5173/about'>About us </a></li>
+              <a href='/about'>About us </a></li>
               <li> &#62; </li>
             <li>
-              <a href='http://localhost:5173/contact'>Contact us </a></li>
+              <a href='/contact'>Contact us </a></li>
         </ul>
     </div>
     </div>

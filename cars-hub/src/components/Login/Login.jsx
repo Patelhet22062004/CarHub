@@ -6,7 +6,7 @@ function Login() {
   const [error, setError] = useState('');
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); 
   
     if (!email || !password) {
       alert('Please fill in the required field(s).');
@@ -38,8 +38,7 @@ function Login() {
   
 
   const redirectToHome = () => {
-    // Redirect to the Home page after successful login
-    window.location.href = 'http://localhost:5173'; // Update the path as per your folder structure
+    window.location.href = 'http://localhost:3000';
   };
   
     return (
@@ -55,10 +54,7 @@ function Login() {
                         <h6 className='text-sm font-normal text-center text-gray-700'>Please sign in to access your full account</h6>
                         </div>
                         <br />
-                        {/* <div className="mb-4">
-                            {/* <label htmlFor="text" className="block text-sm font-semibold text-gray-800">Name </label> }
-                            <input type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-gray-400 focus:ring-gray-300 focus:outline-none focus:ring focus:ring-opacity-40" />
-                        </div> */}
+                      
                         <div className="mb-4">
                             <label htmlFor="email" className="block text-sm font-semibold text-gray-800"> email address</label>
                             <input type="email"  value={email} onChange={(e) => setEmail(e.target.value)} className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-gray-400 focus:ring-gray-300 focus:outline-none focus:ring focus:ring-opacity-40" />
@@ -72,7 +68,7 @@ function Login() {
                            <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600" >Login</button>
                         </div>
                     </form>
-                    <p className="mt-4 text-sm text-center text-gray-700">Don't have an account? <a href='http://localhost:5173/Signup' className="font-medium text-blue-600 hover:underline">Sign up</a></p>
+                    <p className="mt-4 text-sm text-center text-gray-700">Don't have an account? <a href='/Signup' className="font-medium text-blue-600 hover:underline">Sign up</a></p>
                 </div>
             </div>
         </>

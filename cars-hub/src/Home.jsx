@@ -21,10 +21,7 @@ function Home() {
          <h1 className='text-[40px] text-blue font-medium '>Category</h1>
         </div> 
         <Link to={"/shop"}> <Category /></Link> 
-         {/* <div className="flex flex-col justify-center items-center pt-3">
-        <h1 className='text-[40px] text-blue font-medium '>Product Card</h1>
-        </div>  */}
-         {/* <Card /> */}
+         
          <div className="flex flex-col justify-center items-center pt-3">
         <h1 className='text-[40px] text-blue font-medium '>Offers</h1>
         </div> 

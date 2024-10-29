@@ -63,7 +63,7 @@ function SignUpForm() {
   };
 
   const redirectToLogin = () => {
-    window.location.href = 'http://localhost:5173/login'; // Update the path as per your folder structure
+    window.location.href = '/login'; // Update the path as per your folder structure
   };
 
   return (
@@ -75,7 +75,7 @@ function SignUpForm() {
         </h2>
         <p className="mt-2 text-center text-sm leading-5 text-gray-500 max-w">
           Or{' '}
-          <a href="http://localhost:5173/login"
+          <a href="/login"
             className=" ml-1 font-semibold text-blue-600 hover:text-blue-500 focus:outline-none focus:underline transition ease-in-out duration-150">
             login to your account
           </a>

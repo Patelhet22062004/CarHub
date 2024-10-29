@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "nodemon carhub-Backend/car_selling/app.js",
+    "build":"npm install && npm install --prefix cars-hub && npm run build --prefix cars-hub",
+    "start": "nodemon carhub-Backend/car_selling/app.js"
   },
   "author": "",
   "license": "ISC",

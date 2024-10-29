@@ -7,6 +7,9 @@ import 'swiper/css/navigation';
 import './Banner.components.css';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import img1 from "../../../public/images/images/banner2.webp";
+import img2 from "../../../public/images/images/banner3.webp";
+import img3 from "../../../public/images/images/banner4.webp";
 
 export default function Banner() {
   return (
@@ -25,7 +28,7 @@ export default function Banner() {
           modules={[Autoplay, Pagination]}
           className="mySwiper"
         >
-          <SwiperSlide className="">
+          <SwiperSlide>
             <div className="absolute z-30 flex flex-col justify-center left-0 p-4 sm:left-10 md:left-16">
               <h1 className="text-white font-bold text-xs sm:text-sm md:text-2xl lg:text-3xl hidden md:block">
                 Certified car with
@@ -34,7 +37,7 @@ export default function Banner() {
                 Upto 12 Month Warranty Plan
               </h1>
               <div className="flex justify-center mt-2 sm:mt-4">
-                <Link to={"http://localhost:5173/shop"}>
+                <Link to={"/shop"}>
                   <button className="bg-lime-500 text-xs sm:text-sm md:text-base lg:text-lg text-white mt-3 rounded px-3 py-2">
                     Explore Here
                   </button>
@@ -42,13 +45,13 @@ export default function Banner() {
               </div>
             </div>
             <img
-              src="../../public/images/images/banner2.webp"
+              src={img1}
               className="w-full h-[calc(100vh-64px)] object-cover"
               alt="Banner 1"
             />
           </SwiperSlide>
 
-          <SwiperSlide className="">
+          <SwiperSlide>
             <div className="absolute z-30 flex flex-col justify-center left-0 p-4 sm:left-10 md:left-16">
               <h1 className="text-white hidden md:block font-bold text-xs sm:text-sm md:text-2xl lg:text-3xl">
                 Always There for You.
@@ -57,7 +60,7 @@ export default function Banner() {
                 Get Car At Zero Down Payment
               </h1>
               <div className="flex justify-center mt-2 sm:mt-4">
-                <Link to={"http://localhost:5173/shop"}>
+                <Link to={"/shop"}>
                   <button className="bg-lime-500 text-xs sm:text-sm md:text-base lg:text-lg text-white mt-3 rounded px-3 py-2">
                     Explore Here
                   </button>
@@ -65,13 +68,13 @@ export default function Banner() {
               </div>
             </div>
             <img
-              src="../../public/images/images/banner3.webp"
+              src={img2}
               className="w-full h-[calc(100vh-64px)] object-cover"
               alt="Banner 2"
             />
           </SwiperSlide>
 
-          <SwiperSlide className="">
+          <SwiperSlide>
             <div className="absolute z-30 flex flex-col justify-center left-0 p-4 sm:left-10 md:left-16">
               <h1 className="text-white hidden md:block font-bold text-xs sm:text-sm md:text-2xl lg:text-3xl">
                 Driving in style, leaving a lasting impression
@@ -80,7 +83,7 @@ export default function Banner() {
                 Get Best Offers On Festivals
               </h1>
               <div className="flex justify-center mt-2 sm:mt-4">
-                <Link to={"http://localhost:5173/shop"}>
+                <Link to={"/shop"}>
                   <button className="bg-lime-500 text-xs sm:text-sm md:text-base lg:text-lg text-white mt-3 rounded px-3 py-2">
                     Explore Here
                   </button>
@@ -88,7 +91,7 @@ export default function Banner() {
               </div>
             </div>
             <img
-              src="../../public/images/images/banner4.webp"
+              src={img3}
               className="w-full h-[calc(100vh-64px)] object-cover"
               alt="Banner 3"
             />
